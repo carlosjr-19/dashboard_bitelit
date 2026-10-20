@@ -36,7 +36,10 @@ const BitelitApp = {
     const el = document.getElementById('liveClock');
     if (el) {
       const now = new Date();
-      el.textContent = now.toLocaleDateString('es-MX', { weekday: 'short', day: 'numeric', month: 'short' }) + ' ' + now.toLocaleTimeString('es-MX', { hour: '2-digit', minute: '2-digit' });
+      // Una sola línea, p. ej. "mar 20 oct · 17:32"
+      const fecha = now.toLocaleDateString('es-MX', { weekday: 'short', day: 'numeric', month: 'short' }).replace(/[.,]/g, '').replace(/\s+de\s+/g, ' ');
+      const hora = now.toLocaleTimeString('es-MX', { hour: '2-digit', minute: '2-digit', hour12: false });
+      el.textContent = `${fecha} · ${hora}`;
     }
   },
 
