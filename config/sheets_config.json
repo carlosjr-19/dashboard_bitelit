@@ -1,0 +1,56 @@
+{
+  "tickets": {
+    "nombre": "Tickets & Fallas Altan",
+    "sheet_id": "1JTn77UqsFhtB9pxguKJEmSj5RFjFvDpZPgUOrNqlQaA",
+    "pestanas": [
+      "Respuestas de formulario 1"
+    ],
+    "columnas": {}
+  },
+  "procesos": {
+    "nombre": "Procesos Manuales",
+    "sheet_id": "1pDWbJV0PoKOKHMiIXZSJVrZ7H6cwmmDRHK8-byrvIwk",
+    "pestanas": [
+      "PROCESOS",
+      "Respuestas de formulario 1"
+    ],
+    "columnas": {}
+  },
+  "activaciones": {
+    "nombre": "Activaciones",
+    "sheet_id": "10Hc7N_73aX78h17MjxzKitoqIXNSPtv_cxNOVDSY-ek",
+    "pestanas": [
+      "2026"
+    ],
+    "columnas": {}
+  },
+  "portabilidades": {
+    "nombre": "Portabilidades (Port In)",
+    "sheet_id": "15M_3W8l43v5gbEBFQ27sKZj7-UalZHB8C8_UBihnVRs",
+    "pestanas": [
+      "AÑO COMPLETO"
+    ],
+    "columnas": {
+      "operador": "",
+      "agente": ""
+    }
+  },
+  "port_outs": {
+    "nombre": "Port Outs",
+    "sheet_id": "11LZkRNehJykY2DKwmTC856h-vdMT1YLX4lDkHMtvs0Q",
+    "pestanas": [
+      "PORT OUT GUI"
+    ],
+    "columnas": {
+      "operador": "",
+      "fecha": "",
+      "dias": ""
+    }
+  },
+  "finanzas": {
+    "nombre": "Cierre diario bancario",
+    "sheet_id": "147H4ujPyv86zXTz4YymGR0THlOgqFf1vmkMvUssbCOg",
+    "pestanas": [],
+    "columnas": {}
+  }
+}

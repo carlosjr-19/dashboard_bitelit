@@ -1,0 +1,16 @@
+# Secretos: en el servidor van como variables de entorno, nunca dentro de la imagen
+config/credentials.json
+config/admin.json
+config/secret_key.txt
+
+# Datos locales y archivos que no se necesitan para correr
+data/
+_archivo/
+apps_script/
+__pycache__/
+*.pyc
+*.bat
+.git/
+.venv/
+venv/
+.env

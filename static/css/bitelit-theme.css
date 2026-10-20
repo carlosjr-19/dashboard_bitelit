@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Bitelit Primary Colors */
+  --primary-dark: #0D47A1;
+  --primary-800: #1565C0;
+  --primary-700: #1976D2;
+  --primary-400: #42A5F5;
+  --primary-100: #BBDEFB;
+
+  /* Bitelit Secondary (Cyan / Teal) */
+  --secondary-dark: #0084DB;
+  --secondary-600: #0096C7;
+  --secondary-400: #48CAE4;
+  --secondary-200: #90E0EF;
+  --secondary-50: #CAF0F8;
+
+  /* Neutrals */
+  --slate-900: #0F172A;
+  --slate-700: #334155;
+  --slate-500: #64748B;
+  --slate-300: #CBD5E1;
+  --slate-200: #E2E8F0;
+  --slate-50: #F8FAFC;
+
+  /* Semantics */
+  --success: #22C55E;
+  --info: #3B82F6;
+  --warning: #F59E0B;
+  --error: #EF4444;
+
+  /* UI Tokens */
+  --bg-app: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --border-subtle: #E2E8F0;
+  --radius-card: 16px;
+  --radius-btn: 10px;
+  --shadow-card: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+  --shadow-hover: 0 8px 30px -4px rgba(13, 71, 161, 0.12);
+}
+
+body {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-app);
+  color: var(--slate-900);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Bitelit Typography Hierarchy */
+.text-display {
+  font-size: 2.25rem; /* 36px - 40px */
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.text-section-title {
+  font-size: 1.5rem; /* 24px */
+  font-weight: 600;
+  line-height: 1.33;
+}
+
+.text-card-title {
+  font-size: 1.125rem; /* 18px */
+  font-weight: 600;
+}
+
+.text-label-small {
+  font-size: 0.75rem; /* 12px */
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Bitelit Cards */
+.bitelit-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bitelit-card:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+/* High Contrast Metric Card (Dark Theme from Design System) */
+.metric-card-dark {
+  background: linear-gradient(135deg, #0D47A1 0%, #0F172A 100%);
+  color: #FFFFFF;
+  border-radius: var(--radius-card);
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 25px -5px rgba(13, 71, 161, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.metric-card-dark::after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, rgba(72, 202, 228, 0.25) 0%, rgba(255, 255, 255, 0) 70%);
+  pointer-events: none;
+}
+
+.metric-card-light {
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-card);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Bitelit Buttons */
+.btn-primary {
+  background-color: var(--primary-dark);
+  color: #FFFFFF;
+  font-weight: 500;
+  padding: 0.625rem 1.25rem;
+  border-radius: var(--radius-btn);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-800);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(13, 71, 161, 0.25);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary-dark);
+  border: 1.5px solid var(--primary-dark);
+  font-weight: 500;
+  padding: 0.55rem 1.15rem;
+  border-radius: var(--radius-btn);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(13, 71, 161, 0.05);
+}
+
+.btn-tertiary {
+  background-color: transparent;
+  color: var(--slate-700);
+  border: 1px solid var(--slate-200);
+  font-weight: 500;
+  padding: 0.55rem 1rem;
+  border-radius: var(--radius-btn);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-tertiary:hover {
+  background-color: var(--slate-50);
+  border-color: var(--slate-300);
+}
+
+/* Bitelit Navigation Tabs */
+.nav-tab-item {
+  position: relative;
+  padding: 0.85rem 1.25rem;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  color: var(--slate-500);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 2.5px solid transparent;
+}
+
+.nav-tab-item:hover {
+  color: var(--primary-dark);
+}
+
+.nav-tab-item.active {
+  color: var(--primary-dark);
+  font-weight: 600;
+  border-bottom-color: var(--primary-dark);
+}
+
+/* Badges / Chips */
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.badge-success {
+  background-color: rgba(34, 197, 94, 0.12);
+  color: #16A34A;
+}
+
+.badge-info {
+  background-color: rgba(59, 130, 246, 0.12);
+  color: #2563EB;
+}
+
+.badge-warning {
+  background-color: rgba(245, 158, 11, 0.12);
+  color: #D97706;
+}
+
+.badge-error {
+  background-color: rgba(239, 68, 68, 0.12);
+  color: #DC2626;
+}
+
+.badge-cyan {
+  background-color: rgba(0, 150, 199, 0.12);
+  color: #0077B6;
+}
+
+.badge-purple {
+  background-color: rgba(124, 58, 237, 0.12);
+  color: #7C3AED;
+}
+
+/* Bitelit Custom Table */
+.bitelit-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.bitelit-table th {
+  background-color: #F8FAFC;
+  color: var(--slate-500);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid var(--border-subtle);
+  text-align: left;
+}
+
+.bitelit-table td {
+  padding: 0.95rem 1.25rem;
+  font-size: 0.875rem;
+  color: var(--slate-900);
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: middle;
+}
+
+.bitelit-table tr:last-child td {
+  border-bottom: none;
+}
+
+.bitelit-table tr:hover td {
+  background-color: rgba(248, 250, 252, 0.8);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Glassmorphism effects */
+.glass-header {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Custom Modal */
+.modal-backdrop {
+  background-color: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(4px);
+}

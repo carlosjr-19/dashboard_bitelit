@@ -1,0 +1,9 @@
+config/credentials.json
+config/admin.json
+config/secret_key.txt
+data/
+__pycache__/
+*.pyc
+_archivo/
+.env
+
